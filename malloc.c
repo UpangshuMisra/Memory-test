@@ -8,8 +8,16 @@ int main(void)
     char *s;
     printf("s: ");
     scanf("%s", s);
+    if(s== NULL)
+    {
+        return 1;
+    }
 
     char *t = malloc(strlen(s) + 1);
+    if (t == NULL)
+    {
+        return 1;
+    }
 
     /*for(int i = 0; i<=strlen(s); i++)
     {
